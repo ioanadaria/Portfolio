@@ -2,7 +2,7 @@
 
 A professional portfolio website built with semantic HTML, modern CSS, and vanilla JavaScript.
 
-**Live site (after deployment):** <https://ioanadaria.github.io/Portfolio/>
+**Live site:** <https://ioanadaria.github.io/Portfolio/>
 
 ---
 
@@ -38,29 +38,19 @@ python3 -m http.server
 
 ## Contact form
 
-The contact form uses [Formspree](https://formspree.io). To activate it:
-
-1. Sign up at [formspree.io](https://formspree.io) and create a new form.
-2. Copy your form ID (e.g. `xpwzabcd`).
-3. In `script.js`, replace `YOUR_FORM_ID` in the `FORMSPREE_ENDPOINT` constant.
+The contact form uses [Formspree](https://formspree.io) and is fully active. Submissions are delivered to the linked email address.
 
 ## CV
 
-Place your CV file at the root as `ioana-petrescu-cv.pdf` to enable the Download CV button. Commit and push the file — it is not included in this repo.
+`ioana-petrescu-cv.pdf` is included in the repo root and linked from the Download CV button in the hero section.
 
 ## Favicon
 
-A `favicon.ico` file is referenced in `index.html` but not included in this repo. Add one to the root directory and commit it.
+`favicon.ico` is included in the repo root.
 
 ## Deployment
 
-Will be hosted via GitHub Pages. To deploy for the first time:
-
-1. Confirm the repo is on GitHub at `https://github.com/ioanadaria/Portfolio`.
-2. Go to **Settings → Pages → Source → Deploy from a branch**.
-3. Select `main` branch, `/ (root)`, and click **Save**.
-
-Subsequent deployments trigger automatically on every push to `main`.
+Hosted via GitHub Pages on the `main` branch. Every push to `main` triggers an automatic redeploy.
 
 ## License
 
