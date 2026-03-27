@@ -847,3 +847,17 @@ textarea {
     gap: 14px;
   }
 }
+
+/* SECTION: Motion */
+@media (prefers-reduced-motion: reduce) {
+  .floating-shape {
+    animation: none;
+  }
+
+  .btn,
+  .project-card,
+  .nav-list a::after,
+  .project-link::after {
+    transition: none;
+  }
+}

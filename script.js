@@ -78,12 +78,29 @@ navLinks.forEach((link) => {
   });
 });
 
-// SECTION: Contact form handling stub
+// Close mobile nav when clicking outside
+document.addEventListener('click', (e) => {
+  if (
+    navList &&
+    navToggle &&
+    navList.classList.contains('nav-open') &&
+    !navList.contains(e.target) &&
+    !navToggle.contains(e.target)
+  ) {
+    navList.classList.remove('nav-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+});
+
+// SECTION: Contact form handling (Formspree)
+// Sign up at https://formspree.io, create a form, and replace YOUR_FORM_ID below.
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
 const contactForm = select('#contact-form');
 const formHelper = select('#form-helper');
 
 if (contactForm && formHelper) {
-  contactForm.addEventListener('submit', (event) => {
+  contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const formData = new FormData(contactForm);
@@ -97,11 +114,29 @@ if (contactForm && formHelper) {
       return;
     }
 
-    // Simulate successful submit – replace with your own integration
-    formHelper.textContent = 'Thanks for reaching out! This demo form doesn\'t send yet, but your UI is ready.';
-    formHelper.style.color = '#9ca3af';
+    formHelper.textContent = 'Sending…';
+    formHelper.style.color = 'var(--color-text-muted)';
 
-    contactForm.reset();
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: formData,
+        headers: { Accept: 'application/json' },
+      });
+
+      if (response.ok) {
+        formHelper.textContent = 'Message sent! I\'ll get back to you soon.';
+        formHelper.style.color = '#34d399';
+        contactForm.reset();
+      } else {
+        const data = await response.json();
+        formHelper.textContent = (data?.errors?.[0]?.message) || 'Something went wrong. Please try again.';
+        formHelper.style.color = '#f97373';
+      }
+    } catch {
+      formHelper.textContent = 'Network error. Please try again later.';
+      formHelper.style.color = '#f97373';
+    }
   });
 }
 
