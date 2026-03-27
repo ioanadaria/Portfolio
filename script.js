@@ -94,7 +94,7 @@ document.addEventListener('click', (e) => {
 
 // SECTION: Contact form handling (Formspree)
 // Sign up at https://formspree.io, create a form, and replace YOUR_FORM_ID below.
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xpqoqqdk';
 
 const contactForm = select('#contact-form');
 const formHelper = select('#form-helper');
