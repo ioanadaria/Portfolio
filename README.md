@@ -2,7 +2,7 @@
 
 A professional portfolio website built with semantic HTML, modern CSS, and vanilla JavaScript.
 
-**Live site (after deployment):** https://ioanadaria.github.io/Portfolio/
+**Live site (after deployment):** <https://ioanadaria.github.io/Portfolio/>
 
 ---
 
