@@ -23,6 +23,7 @@ Personal portfolio showcasing QA engineering experience, automation projects, sk
 | Selenium Integration Framework (Java + TestNG) | [Selenium-Integration](https://github.com/ioanadaria/Selenium-Integration) |
 | Selenium UI Automation Suite (Python & Java) | [Selenium](https://github.com/ioanadaria/Selenium) |
 | RecordCollector Web App | [recordcollector_web](https://github.com/ioanadaria/recordcollector_web) |
+| API Testing Suite (Python + pytest) | [api-testing-project](https://github.com/ioanadaria/api-testing-project) |
 
 ## Setup
 
@@ -42,7 +43,7 @@ The contact form uses [Formspree](https://formspree.io) and is fully active. Sub
 
 ## CV
 
-`ioana-petrescu-cv.pdf` is included in the repo root and linked from the Download CV button in the hero section.
+`ioana-petrescu-cv.pdf` is included in the repo root and linked from the Download CV button in the hero section. Updated April 2026.
 
 ## Favicon
 
